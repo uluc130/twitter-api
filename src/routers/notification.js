@@ -4,7 +4,7 @@ const Notification = require('../models/notification')
 
 const router = new express.Router()
 
-// Post a
+// Post notification
 
 router.post('/notification', auth, async (req, res) => {
     const notification = new Notification({
@@ -36,7 +36,7 @@ router.get('/notifications', async (req, res)=>{
     }
 })
 
-// Fetch  specicifis users notifications
+// Fetch  specific user's notifications
 
 router.get('/notifications/:id', async (req, res)=>{
     const notifications = await Notification.find({notReceiverID: req.params.id})

@@ -89,7 +89,7 @@ userSchema.virtual('notificationSent', {
 userSchema.virtual('notificationReceived', {
     ref: 'Notification',
     localField: '_id',
-    foreignField: 'notReceiverId'
+    foreignField: 'notReceiverID'
 })
 
 
